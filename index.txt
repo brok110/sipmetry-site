@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sipmetry</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#07060E;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#F2E8D8;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.c{max-width:420px;text-align:center}
+.logo{font-size:32px;font-weight:900;color:#C9A458;margin-bottom:8px}
+.tag{font-size:14px;color:#8A7A6A;margin-bottom:48px}
+.chk{width:64px;height:64px;border-radius:50%;background:#1A2E1A;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.chk svg{width:32px;height:32px}
+h1{font-size:22px;font-weight:700;margin-bottom:12px}
+.msg{font-size:16px;line-height:1.6;color:#A89A8A;margin-bottom:32px}
+.btn{display:inline-block;background:#C9A458;color:#07060E;font-size:16px;font-weight:700;padding:14px 32px;border-radius:12px;text-decoration:none}
+.btn:hover{opacity:.85}
+.ft{margin-top:48px;font-size:13px;color:#5A4A3A}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="logo">Sipmetry</div>
+<div class="tag">Your Cocktail Decision Engine</div>
+<div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+<h1>Email Confirmed</h1>
+<p class="msg">Your account is ready. Open the Sipmetry app and sign in to start scanning your bar.</p>
+<a class="btn" href="sipmetry://">Open Sipmetry</a>
+<p class="ft">2026 Sipmetry</p>
+</div>
+<script>if(/iPhone|iPad|Android/i.test(navigator.userAgent))window.location.href='sipmetry://';</script>
+</body>
+</html>
