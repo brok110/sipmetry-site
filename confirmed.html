@@ -29,6 +29,6 @@ h1{font-size:22px;font-weight:700;margin-bottom:12px}
 <a class="btn" href="sipmetry://">Open Sipmetry</a>
 <p class="ft">© 2026 Sipmetry</p>
 </div>
-<script>if(/iPhone|iPad|Android/i.test(navigator.userAgent))window.location.href='sipmetry://';</script>
+<script>history.replaceState(null,'',location.pathname);if(/iPhone|iPad|Android/i.test(navigator.userAgent))window.location.href='sipmetry://';</script>
 </body>
 </html>
