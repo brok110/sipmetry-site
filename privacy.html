@@ -37,14 +37,14 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <nav class="top"><a href="/">Sipmetry</a></nav>
 <main class="doc">
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: June 3, 2026</p>
+<p class="meta">Last updated: October 10, 2026</p>
 <p>Sipmetry ("we", "our", or "the app") is a cocktail recommendation and bar management app. This Privacy Policy explains what data we collect, how we use it, and your rights regarding that data.</p>
 <h2>1. Data We Collect</h2>
 <h3>Account Information</h3>
 <p>You can create a Sipmetry account in one of three ways: with your email address and a password, with Sign in with Apple, or with Sign in with Google. In all cases we collect your email address, which is used to create and authenticate your account through our authentication provider (Supabase).</p>
 <p>If you register with an email and password, your password is securely handled and stored by Supabase in hashed form; we never have access to your plain-text password. If you sign in with Apple, we receive only the information Apple provides, which may include a private relay email address — we fully respect your choice to use Apple's "Hide My Email" feature and will never attempt to discover your real email address beyond what Apple provides. If you sign in with Google, we receive your email address and basic profile information (which may include your name and profile picture) through Google's secure sign-in. With Apple and Google, we do not request access to any other data from these providers, such as your contacts, calendar, or files.</p>
 <h3>Age Verification</h3>
-<p>During your first sign-in, we ask for your birth year and birth month, along with your device region (country code), to verify that you meet the legal drinking age in your jurisdiction. Only your birth year is stored — in our database for age verification and aggregate analytics (such as understanding the age distribution of our users). Your birth month is used solely for the one-time age calculation at sign-in and is never stored. We do not ask for the day of your birth, and we do not collect or store your full date of birth.</p>
+<p>During your first sign-in, we ask for your birth year and birth month, along with your device region (country code), to verify that you meet the legal drinking age in your jurisdiction. Your birth year and device region are stored with your account for age verification and aggregate analytics (such as understanding the age distribution of our users). Your birth month is used solely for the one-time age calculation at sign-in and is never stored. We do not ask for the day of your birth, and we do not collect or store your full date of birth.</p>
 <h3>Bar Inventory</h3>
 <p>You can add bottles to your personal inventory. This data is stored in our database and used solely to generate personalized cocktail recommendations.</p>
 <h3>Preferences and Interactions</h3>
@@ -57,7 +57,10 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <p>Sipmetry includes two kinds of feedback. First, when you rate recipes (such as likes and dislikes), we store these ratings to improve our recommendation engine. Second, you can send us free-text feedback or bug reports through the in-app feedback form; when you do, the message content, the category you select, and your app version are sent to us, linked to your account, and used to understand issues and improve the app. Please avoid including sensitive personal information in free-text feedback. If you delete your account, your recipe ratings and any feedback you submitted are deleted.</p>
 <h3>Technical and Log Data</h3>
 <p>When you use Sipmetry, our servers automatically receive and record certain technical information, including your IP address, request timestamps, and general device information (such as operating system and app version). This data is collected through standard server logs hosted on our infrastructure provider (Render) and is used solely for debugging, security monitoring, and service reliability. We do not use log data for advertising or behavioral profiling, and it is not linked to any third-party data for tracking purposes. Server logs are retained for approximately 30 days before being automatically purged by our hosting provider.</p>
-<p>We also collect crash and error diagnostics through Sentry to identify and fix bugs. These diagnostics include the app version, operating system, and technical error details (such as a crash stack trace). They are not attached to your IP address or other personal identifiers, and we do not record your screen or in-app activity. This data is used solely to improve app stability.</p>
+<p>We also collect crash and error diagnostics through Sentry to identify and fix bugs. These diagnostics include the app version, operating system, and technical error details (such as a crash stack trace). They are not attached to your IP address or other personal identifiers, and Sentry does not record your screen or in-app activity. This data is used solely to improve app stability.</p>
+<h3>Product Analytics</h3>
+<p>We use PostHog, a product analytics service, to understand how Sipmetry's features are used so we can improve the app. The app sends PostHog usage events, such as when the app is installed, updated, opened, or closed; when you add a bottle to your bar (the type of ingredient, such as London Dry Gin); when you apply Bartender filters (base spirit, style, and ingredients you choose to avoid); when you view or open recommended cocktails; when you view Smart Restock; and when you choose an ingredient in "What if I add…". Each event includes basic app information (app name, version, and build; device type; and screen size) and a session identifier.</p>
+<p>Before you sign in or continue as a guest, these events use a random identifier that PostHog generates on your device; after that, they are linked to your account's random user ID. We do not send your email address, name, password, photos, or the text you type into search to PostHog. PostHog is configured not to store your IP address and not to derive your location from it. We do not use this data for advertising, and we do not sell it or share it with data brokers.</p>
 <h2>2. How We Use Your Data</h2>
 <p>We use your data exclusively to:</p>
 <ul>
@@ -67,6 +70,7 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <li>Process bottle images for identification via AI</li>
 <li>Send push notifications you have opted into (such as low-stock alerts)</li>
 <li>Improve recommendation accuracy based on your feedback and interactions</li>
+<li>Understand how features are used so we can improve the app (product analytics)</li>
 <li>Monitor and maintain service security, stability, and performance</li>
 </ul>
 <p>We do <strong>not</strong> use your data for advertising. We do <strong>not</strong> sell, rent, or share your personal data with advertisers or data brokers. We do <strong>not</strong> engage in cross-app tracking.</p>
@@ -116,6 +120,11 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <td>Crash and error diagnostics</td>
 <td>Anonymized crash reports and error events (app version, OS, error stack). IP address is not attached (PII collection disabled). No session recording.</td>
 </tr>
+<tr>
+<td><strong>PostHog</strong></td>
+<td>Product analytics</td>
+<td>In-app usage events (such as app opens, bottles added, filters applied, and recommendations viewed), app version and build, device type and screen size, and your account's random user ID. We do not send your email address, name, photos, or search text. IP addresses are not stored, and location is not derived from them.</td>
+</tr>
 </tbody>
 </table></div>
 <p>We access OpenAI solely through their API, which does not use submitted data for training AI models. For details, refer to OpenAI's API data usage policy.</p>
@@ -128,8 +137,9 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <li>Expo: <a href="https://expo.dev/privacy" target="_blank" rel="noopener">https://expo.dev/privacy</a></li>
 <li>Render: <a href="https://render.com/privacy" target="_blank" rel="noopener">https://render.com/privacy</a></li>
 <li>Sentry: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">https://sentry.io/privacy/</a></li>
+<li>PostHog: <a href="https://posthog.com/privacy" target="_blank" rel="noopener">https://posthog.com/privacy</a></li>
 </ul>
-<p>We do not use any advertising SDKs, analytics platforms, or cross-app tracking tools.</p>
+<p>We use PostHog only for product analytics, as described above. We do not use any advertising SDKs or cross-app tracking tools.</p>
 <h2>4. Data Retention</h2>
 <p>We retain your data for as long as your account is active. You may delete your account at any time from the Profile tab in the app. Upon account deletion, an automated deletion process begins immediately:</p>
 <ul>
@@ -138,6 +148,7 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <li>If you have created shareable recipe links, those links are not tied to your profile after deletion and expire automatically after their fixed lifetime.</li>
 <li>Server logs that may contain your IP address are retained for approximately 30 days before automatic purging. These logs are not linked to your deleted account and cannot be used to re-identify you.</li>
 <li>Crash and error diagnostics collected via Sentry are not attached to your identity (PII collection is disabled) and are automatically purged on Sentry's default retention schedule (approximately 90 days).</li>
+<li>Product analytics events collected via PostHog are linked to your account's random user ID, not to your email address or name. They are not removed automatically when you delete your account; if you would like them deleted, contact us and we will delete them.</li>
 </ul>
 <p>Account deletion is irreversible and cannot be undone.</p>
 <h2>5. Data Security</h2>
@@ -151,7 +162,7 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <ul>
 <li><strong>Access</strong> your data through the app (inventory, favorites, preferences are all visible in-app)</li>
 <li><strong>Correct</strong> your data by updating your inventory, preferences, or favorites directly within the app</li>
-<li><strong>Delete</strong> your account and all associated personally identifiable data at any time via Profile &gt; Delete Account</li>
+<li><strong>Delete</strong> your account and all associated personally identifiable data at any time via Profile &gt; Delete Account (product analytics events are deleted on request; see Section 4)</li>
 <li><strong>Opt out</strong> of push notifications through your device settings</li>
 </ul>
 <h3>California Residents (CCPA / CPRA)</h3>
@@ -206,57 +217,57 @@ th{background:#0E0B1A;color:#D8CCBA;font-weight:600;white-space:nowrap}
 <td>No</td>
 </tr>
 <tr>
-<td>Demographics</td>
-<td>Age (birth year) and Region (country code)</td>
-<td>App Functionality, Analytics</td>
+<td>User Content</td>
+<td>Other User Content (bar inventory, favorites, taste preferences, and feedback messages)</td>
+<td>App Functionality, Product Personalization</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr>
 <td>User Content</td>
-<td>Photos (camera/library)</td>
+<td>Photos or Videos (bottle photos you choose to scan)</td>
 <td>App Functionality</td>
 <td>No (not stored)</td>
 <td>No</td>
 </tr>
 <tr>
-<td>User Content</td>
-<td>Other User Content (inventory, favorites, preferences)</td>
-<td>App Functionality, Product Personalization</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>User Content</td>
-<td>Feedback messages (free-text app feedback)</td>
-<td>App Functionality</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Usage Data</td>
-<td>Product Interaction (likes, dislikes, ratings)</td>
-<td>App Functionality, Product Personalization</td>
+<td>Identifiers</td>
+<td>User ID (your account's random ID)</td>
+<td>App Functionality, Analytics</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Identifiers</td>
-<td>Device Push Token</td>
-<td>App Functionality</td>
+<td>Device ID (push notification token; random analytics identifier generated on your device)</td>
+<td>App Functionality, Analytics</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Usage Data</td>
+<td>Product Interaction (likes, dislikes, and ratings; in-app usage events)</td>
+<td>App Functionality, Product Personalization, Analytics</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Other Data</td>
+<td>Other Data Types (birth year and device region)</td>
+<td>App Functionality, Product Personalization, Analytics</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Diagnostics</td>
-<td>Performance Data (server logs)</td>
+<td>Crash Data (via Sentry)</td>
 <td>App Functionality</td>
 <td>No</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Diagnostics</td>
-<td>Crash Data (via Sentry)</td>
+<td>Performance Data (server logs)</td>
 <td>App Functionality</td>
 <td>No</td>
 <td>No</td>
